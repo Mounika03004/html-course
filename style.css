@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font:12px Arial,sans-serif;
+    font-size: 13px;
+    color:#061c37;
+    background: #1e4297;
+    background-repeat: repeat-x;
+}
+*
+{
+    margin: 0 auto 0 auto;
+    text-align: left:}
+    #container
+    {
+        display: block;
+        height: auto;
+        position:relative;
+        width:940px;
+    }

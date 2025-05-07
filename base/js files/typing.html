@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title> typing </title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div id="typing">
+
+        </div>
+        <script>
+            let div = document.getElementById('typing')
+            let text = " trained a model called ChatGPT which interacts in a conversational way. ";
+            let i = 0;
+            setInterval(
+                () => {
+                    div.innerHTML = text.slice(0,i);
+                    i++;
+                    if (i == text.length) {
+                        i = 0
+                    }
+                },100
+            )
+        </script>
+    </body>
+</html>

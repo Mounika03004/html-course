@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>document</title>
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slideshow{
+            width: 300px;
+            height: 300px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: reveal 1s infinite;
+        }
+        @keyframes reveal{
+            0%{
+                opacity: 0.1;
+                transform: scale(0.8);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+    <body>
+        <div class="slideshow">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf8LMirApgj_R-O4aqqlDLVyLeIF_Dhtkepg&s"
+             alt="" class="img">
+        </div>
+        <script>
+            let imgEle = document.querySelector('.img');
+            imgs= ["https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?cs=srgb&dl=pexels-jonaskakaroto-736230.jpg&fm=jpg",
+                "https://thumbs.dreamstime.com/b/pink-flowers-float-clear-waters-hawaii-soft-white-sand-below-347952870.jpg",
+                "https://media.istockphoto.com/id/1394440950/photo/natural-view-cosmos-filed-and-sunset-on-garden-background.webp?b=1&s=612x612&w=0&k=20&c=o3n-h2j4aBnaDqKeY-876cTRm1DLOsZcCjcfDZf_9TQ=",
+                "https://plus.unsplash.com/premium_photo-1676475964992-6404b8db0b53?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Zmxvd2Vyc3xlbnwwfHwwfHx8MA%3D%3D",
+                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgcczohD47dRzDqiqB1cOkjTVpO5cQJ-fKr_nv-Un46vHwODLX5T-YrQqKOTW4-BV1ML8&usqp=CAU",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWuy_QTztstcMV1HV4udiloizzGGCQENKcRjoOJAshW37lf9SsTBASCwRYoyf8EQ09aYc&usqp=CAU"];
+                i=0;
+
+                setInterval(
+                    ()=>{
+                        imgEle.src=imgs[i];
+                        i++
+                        if(i==imgs.length){
+                            i=0
+                        }
+                    },1000
+                )
+        </script>
+    </body>
+</html>

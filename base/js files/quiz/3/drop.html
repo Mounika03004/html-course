@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title> drop </title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color:pink;
+            }
+            .dropdown{
+                width: 300px;
+            }
+            .dropdown-select{
+                background-color: white;
+                padding: 12px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            .icon{
+                float: right;
+                font-size: 12px;
+            }
+            .option-list{
+             background-color: white;
+             border-radius: 5px;
+             margin-top: 8px;
+             visibility: hidden;
+            }
+            .option-list.active{
+                visibility: visible;
+            }
+            .option{
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            .option:hover{
+                  background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+</html>
+<body>
+    <div class="dropdown">
+        <div class="dropdown-select">
+            <span class="select">Select List</span>
+            <span class="icon">&#9650</span>
+        </div>
+        <div class="option-List">
+            <div class="option">mounika</div>
+            <div class="option">bindu</div>
+            <div class="option">sravani</div>
+            <div class="option">sujatha</div>
+        </div>
+    </div>
+    <script>
+        let options = document.getElementsByClassName('option');
+        let selectEle = document.querySelector('.select');
+        let optionlist = document.querySelector('.option-List');
+        let icon = document.querySelector('.icon');
+        let dropdown = document.querySelector('.dropdown-select');
+
+        dropdown.onclick = function(){
+            optionlist.classList.toggle('active');
+            icon.innerHTML = "&#9660"
+        }
+        for(let op of options){
+            op.onclick = function(){
+            selectEle.innerText = this.innerText;
+            optionlist.classList.toggle('active');
+            }
+        }
+    </script>
+</body>

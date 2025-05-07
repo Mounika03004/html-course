@@ -1,0 +1,54 @@
+<html>
+<style>
+input[type=text], select{
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid black;
+border-radius: 4px;
+box-sizing:border-box;
+}
+input[type=submit]{
+width: 100%;
+background-color: green;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+input[type=submit]:hover{
+background-colo:solid black;
+}
+div {
+border-radius:5px;
+background-color: solid black;
+padding:20px;
+}
+</style>
+<body>
+<h3> using css to style an html form</h3>
+<div>
+<form action>
+<lable for="fname">First Name</label>
+<input type="text" id="fname" name="firstname" placeholder="your name..">
+
+<lable for="lname">Last Name</label>
+<input type="text" id="lname" name="lastname" placeholder="your last name..">
+
+<label for="place">place</label>
+<select id="place" name="place">
+<option value="vizag">Vizag</option>
+<option value="viziayanagaram">Viziayanagaram</option>
+<option value="bobbili">Bobbili</option>
+</select>
+
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
+
+
+

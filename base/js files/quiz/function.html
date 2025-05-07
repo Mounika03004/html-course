@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title> age</title>
+        <style>
+            .real-input{
+                border: 0;
+                border-bottom: 1px   solid black;
+                display: inline block;
+                width: 75px;
+                text-align: center;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1> java script  final project:</h1>
+        Hello my name is <span id="name"
+        class="fake-input"></span>and i am <span
+        id="age" class="fake-input"></span>years
+        old in dog years I would be<span 
+        id="dogyears" class="fake-input"></span>
+        years old.<br>
+       
+        <script> 
+            const name = document.getElementById("name");
+            const age = document.getElementById("age");
+            const dogyears = document.getElementById("dogyears");
+            name.innerText = "mounika";
+            age.innerText = "19";
+
+            function showDogyears(age){
+                dogyears.innerText = Number(age) * 7;
+                return Number(age) * 7
+            }
+            dogyears.innerText = showDogyears(age.innerText)
+            const fakeinputs = document.querySelectorAll(".fake-input")
+            fakeinputs.forEach(node=>{
+                node.classList.add("real-input");
+            })
+         </script>  
+    </body>
+</html>

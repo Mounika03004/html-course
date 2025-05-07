@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title> Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+     <body>
+        <h1> Quiz app using html,css,javascript</h1>
+        <div class="quiz container" id="quiz">
+            <div class="quiz-header">
+              <h2 id="question"> First question</h2>
+              <ul>
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer">
+                    <label for="a" class="op_label" id="a_text">option1</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer">
+                    <label for="b" class="op_label" id="b_text">option1</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer">
+                    <label for="c" class="op_label" id="c_text">option1</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer">
+                    <label for="d" class="op_label" id="d_text">option1</label>
+                </li>
+              </ul> 
+              <div class="actions">
+                <button id="prev">previous</button>
+                <button id="next">Next</button>
+                <button id="submit">submit</button>
+                <button id="reload" onclick="location.reload()">reload</button> 
+              </div>
+            </div>
+        </div>
+        </div>
+            <div class="result-container" id="result">
+                <h2 id="score"></h2>
+                <div class="actions">
+                    <button id="reload" onclick="location.reload()">Reload</button>
+                    <button id="showAns" onclick="loadAnswer()">Show Answer</button>
+                </div>
+        </div>
+        <script src="script.js"></script>
+     </body>
+</html>

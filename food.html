@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title> Foodie </title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+                font-family: sans-serif;
+                text-decoration:none;
+                list-style: none;
+            }
+            .hero{
+                min-height: 100vh;
+                background: url(https://img.freepik.com/premium-photo/mexican-food-right-side-tabletop_23-2147740725.jpg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .hero1{
+                min-height: 100vh;
+                background: url(https://www.shutterstock.com/image-photo/fried-salmon-steak-cooked-green-600nw-2489026949.jpg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            nav{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 90%;
+                margin:auto;
+                padding-top: 20px;
+            }
+            .logo{
+                color:#e78f38;
+                font-size:30px;
+                font-weight: bolder;
+                transition: 3s;
+            }
+            .logo:hover{
+                transform: translateY(50px);
+            }
+            nav ul{
+                display: flex;
+                align-items: center;
+            }
+            nav ul li{
+                margin:0 20px;
+            }
+            nav ul li a{
+                font-size:15px;
+                color:#fff;
+                text-transform: uppercase;
+            }
+            nav ul li a:hover{
+                color:#e78f38;
+                border-bottom: 2px solid #e78f38;
+            }
+            nav button{
+                background: #e78f38;
+                border:none;
+                color:#fff;
+                padding:12px 35px;
+                font-size: 15px;
+                font-weight: 600;
+                border-radius: 2rem;
+                transition: .4s;
+            }
+            nav button:hover{
+                scale: .8;
+            }
+            .content{
+                position: absolute;
+                top:35%;
+                left: 90px;
+            }
+            .new-content{
+                /* position: absolute; */
+                top:35%;
+                left: 90px;
+            }
+            h2{
+                font-size: 50px;
+                text-transform: uppercase;
+                color:#fff;
+            }
+            p{
+                font-size: 20px;
+                margin-top: 10px;
+                color:#fff;
+            }
+            .content button{
+                margin-top: 50px;
+                background: #e78f38;
+                border:none;
+                color:#fff;
+                padding:12px 35px;
+                font-size: 15px;
+                font-weight: 200;
+                border-radius: 2rem;
+                transition: .3s;
+            }
+            .content button:hover{
+                scale: .8;
+            }
+            .content button.know_more{
+                background:transparent;
+                border:2px solid #e78f38;
+                color:#e78f38;
+                margin-left: 30px;
+            }
+            .content button.know_more:hover{
+                background:#e78f38;
+                color:#eee;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="hero">
+            <nav>
+                <a href="#" class="logo">Foodie</a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+                <button>Login</button>
+            </nav>
+            <div class="content">
+                <h2>GOOD FOOD<br> GOOD LIFE</h2>
+                <p>Backflow, also known as Backpressure or Back-Siphonage, is the unwanted flow
+                 of contaminated water in the reverse.<br> direction that can cause contamination of clean water lines.
+                 When measured on the pH scale, anything above a 7 on the<br> pH scale is considered a base.
+                  When the pH levels reach or exceed 12.5 pH, it then becomes hazardous. As with all hazardous<br> wastes,
+                   when in contact with human or environmental health, it can be very dangerous.</p>
+                   <button>Order Now</button>
+                   <button class="know_more">Know more</button>
+            </div>
+        </div>
+        <div>
+            <div class="hero1">
+            <div class="new-content">
+                <h2>GOOD FOOD<br> GOOD LIFE</h2>
+                <p>Backflow, also known as Backpressure or Back-Siphonage, is the unwanted flow
+                 of contaminated water in the reverse.<br> direction that can cause contamination of clean water lines.
+                 When measured on the pH scale, anything above a 7 on the<br> pH scale is considered a base.
+                  When the pH levels reach or exceed 12.5 pH, it then becomes hazardous. As with all hazardous<br> wastes,
+                   when in contact with human or environmental health, it can be very dangerous.</p>
+                   <button>Order Now</button>
+                   <button class="know_more">Know more</button>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>

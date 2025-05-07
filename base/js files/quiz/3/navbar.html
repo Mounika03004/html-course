@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>document</title>
+        <style>
+            *{
+                margin: 0;
+                padding:0;
+                box-sizing: border-box;
+                
+            }
+            nav{
+                position: fixed;
+                z-index: 10px;
+                top:0;
+                left:0;
+                width: 100%;
+                background-color: lightpink;
+                height: 50px;
+                display: flex;
+                margin-left: 1px;
+                padding: 0 20px;
+            }
+            .logo{
+                width:35%;
+                display: flex;
+                align-items: center;
+            }
+            .nav-links{
+                width: 75%;
+                display: flex;
+                 justify-content: space-around;
+                 align-items: center; 
+            }
+
+            .nav-links li{
+                list-style:none ;
+            }
+            .nav-links a{
+                color:#2035ee;
+                text-decoration: none;
+            }
+            .content{
+                position: relative;
+                top:50px;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">LOGO</div>
+            <ul class="nav-links">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">services</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+             when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              It has survived not only five centuries, but also the leap into electronic typesetting,
+               remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                 software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </body>
+</html>
