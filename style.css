@@ -11,9 +11,9 @@ body {
 *
 {
     margin: 0 auto 0 auto;
-    text-align: left:}
-    #container
-    {
+    text-align: left;
+}
+    #container {
         display: block;
         height: auto;
         position:relative;

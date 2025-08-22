@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title> Tip calculator </title>
+        <style>
+            *{
+            box-sizing: border-box;
+            }
+            body{
+                background-color: white;
+                font-family: sans-serif;
+                text-align: center;
+                
+            }
+            #container{
+                background-color: green;
+                max-width: 600px;
+                margin: 100px auto;
+                padding:20px;
+                box-shadow: 0 0 10px rgba(234, 88, 10, 0.2);
+                border-radius: 10px;
+                
+            }
+            h1{
+                margin-top: 0;
+                text-align: center;
+            }
+            input{
+                padding:5px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                margin: 10px 0;
+                width:5 0%;
+            }
+            button{
+                background-color: rgb(3, 123, 3);
+                color:white;
+                padding:10px;
+                border: none;
+                cursor: pointer;
+                margin: 10px 0;
+                width:35%;
+                font-size: 18px;
+                text-transform: uppercase;
+                transition: background-color 0.2s ease;
+                border-radius: 5px;
+            }
+            button.hover{
+                background-color: green;
+            }
+            #total{
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+          <h1> Tip Calculator </h1>
+          <p>Enter the bill amount and tip percentage to calculate the total.</p>
+          <form>
+            <label for="name">Bill amount:</label><br>
+            <input type="number" id="bill"><br>
+
+            <label for="name">Tip percentage:</label><br>
+            <input type="number" id="tip"><br>
+
+            <button id="calculate">CALCULATE</button><br>
+
+             <label for="total">Total:</label>
+             <span id="total"></span>
+          </form>
+        </div>
+        <script>
+            let bill1 = document.getElementById("bill");
+            let tipp = document.getElementById("tip");
+            let subm = document.getElementById("calculate");
+            let toal = document.getElementById("total");
+            function calculate(){
+                event.preventDefault();
+             const billvalue = bill1.value;
+             const tipvalue = tipp.value;
+             const toalvalue = billvalue * (1+tipvalue / 100);
+             toal.innerText = toalvalue.toFixed(2);
+            }
+            subm.addEventListener("click",calculate)
+        </script>
+    </body>
+</html>

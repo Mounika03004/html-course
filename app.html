@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title> App</title>
+        <style>
+            body{
+                padding: 0;
+                margin: 0;
+                font-family:sans-serif;
+                background: rgb(159, 217, 239);
+                color:grey;
+            }
+            img{
+                display: block;
+                width: 10   0%;
+            }
+            .section-center{
+                width: 90vw;
+                margin: 0auto;
+                max-width: 1170px;
+                min-width: 340px;
+                padding: 5rem 0;
+               
+            }
+            .image{
+                margin-bottom: 2rem;
+            }
+            img{
+                border-radius: 0.5rem;
+                object-fit: cover;
+                height: 30rem;
+                padding: 40px;
+            
+            }
+            .tabs{
+                background:pink;
+                border-radius: 0.5rem;
+                grid-template-rows: auto 1fr;
+                width: 150%;
+                padding: 5px;
+            }
+            .btn-container{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .button:nth-child(1){
+                border-top-left-radius: 0.5rem;
+            }
+            .button:nth-child(3){
+                border-bottom-right-radius: 0.5rem;
+            }
+            .button{
+                padding: 1rem 0;
+                border: none;
+                font-size: 1rem;
+                background: rgb(162, 162, 236);
+                cursor: pointer;
+                transition: all 0.3s linear;
+                letter-spacing: 0.25rem;
+            }
+            .button:hover:not(.live){
+                background: rgb(211, 11, 44);
+                color: white;
+            }
+            .tabs-content{
+                padding: 2rem 1.5rem;
+            }
+            .content{
+                display: none;
+            }
+            .button.live{
+                background:rgb(162, 162, 236) ;
+            }
+            .content.live{
+                display: block;
+            }
+            p{
+                text-align: left;
+                padding: 2px;
+                margin: 2px;
+            }
+           
+            @media(min-width:992px){
+                .image{
+                    margin-bottom: 0;
+                }
+                .section-center{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 2rem;
+                }
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="section-center">
+            
+            <div class="image">
+                <img src="https://img.freepik.com/premium-photo/glowing-blue-mushrooms-magical-forest_777078-132981.jpg" alt=""/>
+            </div>
+            <div class="tabs">
+                <div class="btn-container">
+                    <button class="button live" data-id="step1">step1</button>
+                    <button class="button" data-id="step2">step2</button>
+                    <button class="button" data-id="step3">step3</button>
+                </div>
+                <div class="tab-content">
+                    <div class="content live" id="step1">
+                        <h3>Step 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Illum sint cumque quasi, amet impedit tempore necessitatibus iste.
+                              Ratione possimus perspiciatis sapiente, ex alias, ipsam sint beatae
+                               vel repellat aperiam corrupti porro et molestiae nobis itaque recusandae
+                                vitae atque! Reiciendis voluptatum molestiae autem consectetur corporis
+                                 libero itaque quo mollitia quod! Corrupti doloribus veniam iusto soluta
+                                  laborum saepe debitis reiciendis atque nihil eaque ducimus quo ullam ipsum,
+                                   laboriosam velit vitae sint, eius molestiae unde, tempora hic ipsam? Cupiditate,
+                                    beatae. Nostrum eos, id velit nisi libero exercitationem, et fugiat assumenda
+                                     mollitia debitis deleniti, illum iusto. Officiis, ratione ex? Magni, impedit vel.
+                                      Quam, eaque. <br>
+                                    <img src="https://www.shutterstock.com/image-photo/blue-hat-oyster-mushrooms-growing-600nw-1848583411.jpg" width="75%" height="20%"/></p>
+                    </div>
+                    <div class="content" id="step2">
+                        <h3>Step 2</h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                           <img src="https://media.istockphoto.com/id/1307193483/vector/glowing-blue-toadstools.jpg?s=612x612&w=0&k=20&c=qhn_ilkocf3vkL6vHzzuppgfoMMxJ1Kz1YvB-qzqqWk=" height="20%"/> </p>
+                        </div>
+                    </div>
+                    <div class="content" id="step3">
+                        <h3>Step 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum sint cumque quasi, amet impedit tempore necessitatibus iste. Ratione possimus perspiciatis sapiente, ex alias, ipsam sint beatae vel repellat aperiam corrupti porro et molestiae nobis itaque recusandae vitae atque! Reiciendis voluptatum molestiae autem consectetur corporis libero itaque quo mollitia quod! Corrupti doloribus veniam iusto soluta laborum saepe debitis reiciendis atque nihil eaque ducimus quo ullam ipsum, laboriosam velit vitae sint, eius molestiae unde, tempora hic ipsam? Cupiditate, beatae. Nostrum eos, id velit nisi libero exercitationem, et fugiat assumenda mollitia debitis deleniti, illum iusto. Officiis, ratione ex? Magni, impedit vel. Quam, eaque.
+                            <img src="https://images.stockcake.com/public/a/a/0/aa0f695e-8eaa-477c-ac6b-564bdb7a5fdf_large/glowing-mushroom-magic-stockcake.jpg"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+             const tabs = document.querySelector(".tabs");
+             const btns = document.querySelectorAll(".button");
+             const articles = document.querySelectorAll(".content");
+
+             tabs.addEventListener("click",function(e) {
+                const id = e.target.dataset.id;
+                if(id){
+                    btns.forEach(function(btn){
+                        btn.classList.remove("live");
+                    });
+                        e.target.classList.add("live");
+                        articles.forEach(function(article){
+                            article.classList.remove("live");
+                        });
+                        const element = document.getElementById(id);
+                        element.classList.add("live");
+                } 
+             } );
+        </script>
+    </body>
+</html>

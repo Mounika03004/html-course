@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title> timer </title>
+        <style>
+            .container{
+                margin:0 auto;
+                max-width: 400px;
+                padding: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                padding: 20px;
+
+            }
+            .title{
+                width:50px;
+                margin-bottom: 10PX;
+            }
+            .timer{
+               font-size: 70px;
+            }
+             button{
+                font-size: 20px;
+                padding: 10px 20px;
+                color:white;
+                margin: 10px;
+
+                border:none;
+                border-radius: 4px;
+                cursor: pointer;
+                text-transform: uppercase;
+                transition: opacity 0.3s ease-in-out;
+             }
+             button:hover{
+               opacity: 0.7;
+             }
+              #addstart{
+                background-color: green;
+             }
+             #addstop{
+                background-color: red;
+             }
+             #addreset{
+                background-color: rgb(217, 94, 213);
+             }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">PomodoroTimer </h1>
+              <p class="timer" id="timer">25:00</p>
+              <div class="button">
+              <button  id="addstart">START</button>
+
+              <button  id="addstop">STOP</button>
+
+              <button  id="addreset">RESET</button>
+              </div>
+        </div>
+        <script>
+            const time = document.getElementById("timer");
+            const start = document.getElementById("addstart");  
+            const stop = document.getElementById("addstop");
+            const reset = document.getElementById("addreset");
+
+            let interval;
+            let timeLeft =1500;
+
+            function updateTimer(){
+                
+                let minutes = Math.floor(timeLeft/60);
+                let seconds = timeLeft % 60;
+                let formattedTime=`${minutes.toString().padStart(2,"0")}:
+                ${seconds.toString().padStart(2,"0")}`;
+                time.innerHTML = formattedTime;
+            }
+            function addstart(){
+                 event.preventDefault();
+                interval = setInterval(() =>{
+                    timeLeft--;
+                    updateTimer();
+                    if(timeLeft === 0){
+                        clearInterval(interval);
+                        alter("Time's up!");
+                        timeLeft = 1500;
+                        updateTime();
+                    }
+                },1000);
+            }
+            function addstop(){
+                clearInterval(interval);
+            }
+            function addreset(){
+                clearInterval(interval);
+                timeLeft = 1500;
+                updateTimer();
+            }
+            start.addEventListener("click",addstart);
+            stop.addEventListener("click",addstop);
+            reset.addEventListener("click",addreset);
+
+        </script>
+    </body>
+</html>

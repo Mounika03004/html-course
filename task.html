@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title> Task</title>
+        <style>
+           *{
+            margin: 0;
+            padding:0;
+           }
+           form{
+            padding:20px;
+            text-align: center;
+           }
+           
+          
+        </style>
+    </head>
+    <body>
+        <div class="form">
+        <form >
+
+            <label for="name">Task1:</label>
+            <input type="number" id="task1"><br>
+
+            <label for="name">Task2:</label>
+            <input type="number" id="task2"><br><br>
+
+            <button type="submit" onclick="addTask1()">Add +</button>
+            
+             <button type="submit" onclick="addTask2()">Subtraction -</button>
+
+              <button type="submit" onclick="addTask3()">Multiple *</button>
+
+           <h1 id="show"></h1>
+           
+        </form> 
+    </div>
+    <script>
+            let task1 =document.getElementById("task1");
+            let task2 = document.getElementById("task2");
+            let sum;
+
+          function addTask1(){
+            event.preventDefault();
+        
+             sum = parseInt(task1.value) + parseInt(task2.value);
+            show.innerText = sum
+           task1.value =" ";
+           task2.value="0 ";
+          } 
+          function addTask2(){
+            event.preventDefault();
+        
+            sum = parseInt(task1.value) - parseInt(task2.value);
+            show.innerText = sum
+             task1.value =" ";
+           task2.value=" ";
+            
+          } 
+        
+             function addTask3(){
+            event.preventDefault();
+    
+            sum = parseInt(task1.value) * parseInt(task2.value);
+            show.innerText = sum
+             task1.value ="";
+           task2.value ="";
+            
+          } 
+          
+    </script>
+
+    </body>
+</html>

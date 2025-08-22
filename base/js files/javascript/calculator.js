@@ -17,4 +17,4 @@ const number2 = parseInt(prompt('Enter the second number: '));
     result = number1/number2;
  }
 
- console.log(`${number1} ${operator} ${number2} = ${result}`);
+ document.write(`${number1} ${operator} ${number2} = ${result}`);
